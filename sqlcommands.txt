@@ -1,0 +1,27 @@
+CREATE DATABASE rk
+
+
+use rk
+
+
+CREATE TABLE mismatch_users
+(
+	email varchar(40),
+	mobile varchar(13),
+	password varchar(40) NOT NULL,
+	join_date datetime,
+	first_name varchar(15),
+	last_name varchar(15),
+	gender char(1),
+	birthdate date,
+	city varchar(15),
+	state varchar(15),
+	picture varchar(60),
+	active int(1) NOT NULL,
+	hash varchar(32)	
+)
+
+
+
+ALTER TABLE mismatch_users ADD user_id INT(11) NOT NULL AUTO_INCREMENT FIRST,
+ADD PRIMARY KEY (user_id)
